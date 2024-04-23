@@ -1,0 +1,48 @@
+package com.danielnunesro.quempegou.service;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.danielnunesro.quempegou.entity.Registro;
+import com.danielnunesro.quempegou.repository.RegistroRepository;
+
+@Service
+public class RegistroService {
+	
+	@Autowired
+	private RegistroRepository repository;
+	
+	public Registro create(String name, String item) {
+		if (name == null || item == null) {
+            throw new IllegalArgumentException("Name and item cannot be null");
+        }
+		Registro registro = new Registro(name, item);
+		repository.save(registro);
+		return registro;
+		
+	}
+	
+	public List<Registro> findAll() {
+		return repository.findAll();
+	}
+	
+	public List<Registro> findByItem(String item) {
+		return repository.findByItem(item).orElseThrow(() -> new RuntimeException());
+	}
+	
+	public List<Registro> findByName(String name) {
+		return repository.findByName(name).orElseThrow(() -> new RuntimeException());
+	}
+	
+	public List<Registro> findByDate(LocalDate date) {
+		return repository.findByDate(date).orElseThrow(() -> new RuntimeException());
+	}
+	
+	public void deleteById(Long id) {
+		repository.deleteById(id);
+	}
+	
+}

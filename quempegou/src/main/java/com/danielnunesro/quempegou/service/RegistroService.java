@@ -1,6 +1,7 @@
 package com.danielnunesro.quempegou.service;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,16 +17,19 @@ public class RegistroService {
 	private RegistroRepository repository;
 	
 	public Registro create(Registro registro) {
-		if(registro.getName() != null && registro.getItem() != null) {
-			repository.save(registro);
-			return registro;
-		} else {
-			throw new RuntimeException();
-		}
+		registro.setDate(LocalDate.now());
+		registro.setHour(LocalTime.now());
+		repository.save(registro);
+		return registro;
+		
+	}
+	
+	public List<Registro> findAll() {
+		return repository.findAll();
 	}
 	
 	public List<Registro> findByItem(String item) {
-		return repository.findByItem(item).orElseThrow(() -> new RuntimeException());
+		return repository.findByItem(item).orElseThrow(() -> new RuntimeException("Nenhum item encontrado"));
 	}
 	
 	public List<Registro> findByName(String name) {

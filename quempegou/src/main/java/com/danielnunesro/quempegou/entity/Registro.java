@@ -5,6 +5,9 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Objects;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.persistence.Entity;
@@ -27,8 +30,12 @@ public class Registro implements Serializable {
 	
 	private String item;
 	
+	@JsonFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private LocalDate date;
 	
+	@JsonFormat(pattern = "HH:mm:ss")
+    @DateTimeFormat(iso = DateTimeFormat.ISO.TIME)
 	private LocalTime hour;
 	
 	
@@ -40,8 +47,8 @@ public class Registro implements Serializable {
 	public Registro(String name, String item) {
 		this.name = name;
 		this.item = item;
-		this.date = LocalDate.now();
-		this.hour = LocalTime.now();
+		this.date = date;
+		this.hour = hour;
 	}
 
 
