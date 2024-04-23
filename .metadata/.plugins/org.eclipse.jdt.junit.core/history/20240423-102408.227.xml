@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RegistroTest" project="quempegou" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.danielnunesro.quempegou.unittest.entity.RegistroTest" time="0.03" displayname="RegistroTest" uniqueid="[engine:junit-jupiter]/[class:com.danielnunesro.quempegou.unittest.entity.RegistroTest]">
+    <testcase name="testConstructor" classname="com.danielnunesro.quempegou.unittest.entity.RegistroTest" time="0.03" displayname="testConstructor()" uniqueid="[engine:junit-jupiter]/[class:com.danielnunesro.quempegou.unittest.entity.RegistroTest]/[method:testConstructor()]">
+      <error>java.lang.NullPointerException: Cannot invoke "com.danielnunesro.quempegou.entity.Registro.getDate()" because "this.registro" is null&#13;
+	at com.danielnunesro.quempegou.unittest.entity.RegistroTest.testConstructor(RegistroTest.java:21)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

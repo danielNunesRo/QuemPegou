@@ -1,0 +1,25 @@
+package com.danielnunesro.quempegou.unittest.entity;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import com.danielnunesro.quempegou.entity.Registro;
+
+public class RegistroTest {
+
+	private Registro registro;
+
+	@BeforeEach
+	public void setUp() {
+		registro = new Registro("Nome", "Item");
+	}
+
+	@Test
+	public void testConstructor() {
+		assertNotNull(registro.getDate());
+		assertNotNull(registro.getHour());
+	}
+
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RegistroTest" project="quempegou" tests="1" started="0" failures="0" errors="1" ignored="0">
+  <testsuite name="com.danielnunesro.quempegou.unittest.entity.RegistroTest" incomplete="true" displayname="RegistroTest" uniqueid="[engine:junit-jupiter]/[class:com.danielnunesro.quempegou.unittest.entity.RegistroTest]">
+    <error>org.junit.platform.commons.JUnitException: @BeforeAll method 'public void com.danielnunesro.quempegou.unittest.entity.RegistroTest.setUp()' must be static unless the test class is annotated with @TestInstance(Lifecycle.PER_CLASS).&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1092)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    <testcase name="testConstructor" classname="com.danielnunesro.quempegou.unittest.entity.RegistroTest" incomplete="true" displayname="testConstructor()" uniqueid="[engine:junit-jupiter]/[class:com.danielnunesro.quempegou.unittest.entity.RegistroTest]/[method:testConstructor()]"/>
+  </testsuite>
+</testrun>

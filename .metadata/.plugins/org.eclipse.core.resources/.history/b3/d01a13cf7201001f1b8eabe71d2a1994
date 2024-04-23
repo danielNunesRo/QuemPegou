@@ -1,0 +1,5 @@
+package com.danielnunesro.quempegou.entity;
+
+public class Registro {
+
+}

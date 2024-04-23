@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RegistroTest" project="quempegou" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.danielnunesro.quempegou.unittest.entity.RegistroTest" time="0.041" displayname="RegistroTest" uniqueid="[engine:junit-jupiter]/[class:com.danielnunesro.quempegou.unittest.entity.RegistroTest]">
+    <testcase name="testConstructor" classname="com.danielnunesro.quempegou.unittest.entity.RegistroTest" time="0.041" displayname="testConstructor()" uniqueid="[engine:junit-jupiter]/[class:com.danielnunesro.quempegou.unittest.entity.RegistroTest]/[method:testConstructor()]"/>
+  </testsuite>
+</testrun>
