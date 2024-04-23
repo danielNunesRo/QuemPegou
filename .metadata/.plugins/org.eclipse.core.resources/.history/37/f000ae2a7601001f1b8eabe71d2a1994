@@ -1,0 +1,5 @@
+package com.danielnunesro.quempegou.repository;
+
+public class RegistroRepository {
+
+}

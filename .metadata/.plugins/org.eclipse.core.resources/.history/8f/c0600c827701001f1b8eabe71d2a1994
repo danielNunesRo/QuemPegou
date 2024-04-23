@@ -1,0 +1,28 @@
+package com.danielnunesro.quempegou.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.danielnunesro.quempegou.entity.Registro;
+import com.danielnunesro.quempegou.repository.RegistroRepository;
+
+@Service
+public class RegistroService {
+	
+	private RegistroRepository repository;
+	
+	public Registro create(Registro registro) {
+		if(registro.getName() != null && registro.getItem() != null) {
+			repository.save(registro);
+			return registro;
+		} else {
+			throw new RuntimeException();
+		}
+	}
+	
+	public List<Registro> findByItem(String item) {
+		return repository.findByItem(item).orElseThrow(() -> new RuntimeException());
+	}
+	
+}
